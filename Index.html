@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+    <div class="slideshow">
+        <img src="imagenes/fondo de pagina principal/imagen de prueba.png" alt="Imagen 1" class="active">
+        <img src="imagenes/fondo de pagina principal/fondo 1 de la pagina web.webp" alt="Imagen 2">
+        <img src="imagenes/fondo de pagina principal/fondo de pantalla de pagina web 03.png" alt="Imagen 3">
+        <img src="imagenes/fondo de pagina principal/fonde de imagen anime de pagina web.jpg" alt="Imagen 4">
+        <div class="overlay">
+                   Ingresa al Mundo del Coleccionismo
+            <br>
+            <a href="paginaprincipal.html" class="button">Entrar</a>
+        </div>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61576252423681"><img src="imagenes/imagenes de iconos pincipales/facebook.webp" alt="Facebook"></a>
+        <a href="https://www.instagram.com/everything_in_my_store/"><img src="imagenes/imagenes de iconos pincipales/intragram.png" alt="Instragram"></a>
+        <a href="https://www.tiktok.com/"><img src="imagenes/imagenes de iconos pincipales/tiktok.webp" alt="Tiktok"></a>
+    </div>
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.slideshow img');
+        setInterval(() => {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 5000);
+    </script>
+</body>
+</html>

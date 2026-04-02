@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .register-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            font-size: 14px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #333;
+        }
+        .social-register {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-register img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Registrarse</h2>
+        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+        <p>Nombre </p>
+        <input type="text" id="name" placeholder="Nombre Completo">
+        <p>Email </p>
+        <input type="text" id="email" placeholder="Email">
+        <p>Contraseña </p>
+        <input type="password" id="password" placeholder="Contraseña">
+        <p>Confirmar Contraseña </p>
+        <input type="password" id="confirm-password" placeholder="Confirmar Contraseña">
+        <button onclick="register()">Registrarse</button>
+        <p>o regístrate con</p>
+        <div class="social-register">
+            <img src="facebook-icon-social-media-8dfafe.webp" alt="Facebook">
+            <img src="images (3).png" alt="Google">
+        </div>
+        <p id="message" style="color: red;"></p>
+    </div>
+
+    <script>
+        function register() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var message = document.getElementById("message");
+            
+            if (name === "" || email === "" || password === "" || confirmPassword === "") {
+                message.style.color = "red";
+                message.textContent = "Todos los campos son obligatorios";
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                message.style.color = "red";
+                message.textContent = "Las contraseñas no coinciden";
+                return;
+            }
+            
+            message.style.color = "green";
+            message.textContent = "Registro exitoso!";
+            setTimeout(function() {
+                window.location.href = "login.html";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

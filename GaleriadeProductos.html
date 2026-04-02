@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .grid-container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 1.1em;
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .product button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .product button:hover {
+            background: #0056b3;
+        }
+        /* Diseño de la cuadrícula para distintos dispositivos */
+        @media (min-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .product.large {
+                grid-column: span 2;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="product large">
+            <img src="image (2).png" width="150" height="230" alt="image (2).png">
+            <h3> Pistola Hidrogel G18 </h3>
+            <p>S/35</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="image (1).png" width="150" height="230">
+            <h3> Pistola Hidrogel con carga </h3>
+            <p>S/ 55 </p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <img src="image (3).png"  width="180" height="230" >
+            <h3> Rompecabezas de 1000 Piezas </h3>
+            <p>S/ 50 </p>
+            <button>Comprar</button>
+        </div>
+        <div class="product">
+            <a href="informacion.html" target="_blank">
+               <img src="png-transparent-hasbro-monopoly-board-game-toy-thumbnail-removebg-preview.png" width="180" height="230" >
+            </a> 
+            <h3>Monopolio</h3>
+            <p>S/ 28</p>
+            <button>Comprar</button>
+   
+        </div>
+        <div class="product large">
+            <img src="Muneca-wish-Asha-Disney-original-1-300x300.webp" width="180" height="230" alt="c:\Users\diego\Downloads\Captura de pantalla 2025-02-04 103640.png">
+            <h3>Muñequita sirenita </h3>
+            <p>S/ 30 </p>
+            <button>Comprar</button>
+        </div>
+    </div>
+</body>
+</html>

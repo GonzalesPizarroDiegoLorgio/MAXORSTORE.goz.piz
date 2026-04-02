@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 100px; /* más grande */
+    height: 100px;
+    object-fit: contain;
+    background: none; /* sin fondo */
+    border: none; /* sin bordes */
+    padding: 0;
+    box-shadow: none; /* sin sombra */
+}
+body {
+   
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #7ed7e9, #ffffff); /* Degradado de colores */
+    background-size: cover;
+    background-attachment: fixed; /* Para que el fondo no se desplace */
+    color: white; /* Cambia el color del texto si es necesario */
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(189, 55%, 40%);
+    color: rgb(227, 227, 234);
+    padding: 1rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sección Principal con Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+.main-content .article {
+    background: #f4f4f4;
+    padding: 20px;
+}
+.main-content .sidebar {
+    background: #ddd;
+    padding: 20px;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));    gap: 10px;
+padding: 20px;
+}
+.gallery img {
+    width: 100%;
+    height: 400px; /* Ajusta la altura según necesites */
+    object-fit: cover; /* Recorta la imagen para que cubra el área */
+    display: block;
+    box-shadow: 10px 10px 15px rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.gallery img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.7); /* Aumenta la sombra */
+}
+/* Footer con elementos flexibles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #f3eded;
+    color: white;
+    padding: 2rem 1rem;
+    margin-top: 40px; /* espacio extra desde la galería */
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.imagen-con-fondo {
+    display: inline-block; /* Ajusta el fondo al tamaño de la imagen */
+    padding: 5px; 
+ object-fit: cover;
+}
+
+.redes-sociales {   
+display: block;
+margin: 0 auto;
+gap: 15px;
+}
+
+.redes-sociales img {
+width: 40px;
+height: 40px;
+transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+transform: scale(1.2);
+}

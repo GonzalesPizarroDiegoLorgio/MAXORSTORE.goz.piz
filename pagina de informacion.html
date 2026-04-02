@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto - Tienda Online</title>
+  <link rel="stylesheet" href="css/P.informacion.css">
+</head>
+<body>
+<header class="barra-superior">
+    <div class="logo-titulo">
+        <img src="imagenes/imagenes de iconos pincipales/logo de la empresa.png" alt="Logo de la empresa" class="logo">
+        <h2>STORE OF EVERYTHING</h2>
+    </div>
+    <nav>
+        <ul class="top-lista">
+            <li><a class="aside-text" href="paginaprincipal.html">Inicio</a></li>
+            <li><a class="aside-text" href="servicios.html">Servicios</a></li>
+            <li><a class="aside-text" href="Contacenos.html">Contáctanos</a></li>
+            <li><a class="aside-text" href="LoginnyRegistroo.html">Iniciar Sesión</a></li>
+            🛒 <span id="cart-count">0</span>
+        </ul>
+    </nav>
+</header>    
+  <div class="container">
+    <div class="product">
+      <div class="images">
+     <div class="images-carousel">
+  <button class="carousel-btn left" onclick="prevImage()">‹</button>
+  <img id="carousel-image" src="imagenes/producto-juguetes/monopolio.png" alt="Imagen del producto">
+  <button class="carousel-btn right" onclick="nextImage()">›</button>
+</div>
+      </div>
+      <div class="titulo-jueguete">
+        <h1 id="product-name">Monopolio Clasico - Juego de mesa genérico</h1>
+        <div class="price" id="product-price">S/29.99</div>
+         <p class="description">
+                Elige tu token favorito de Monopoly, colócalo en la casilla de SALIDA y tira los dados para empezar a comprarlo todo. El 
+                clásico juego Monopoly consiste en comprar, vender e intercambiar propiedades para ganar. Cuantas más propiedades poseas, 
+                más renta podrás cobrar.¿Gastar una buena suma en Plaza Park o comprar una propiedad más económica como St. James? Toma 
+                la decisión en este juego de mesa para adultos y niños mayores de 8 años.Las tarjetas de Fortuna y de Arca Comunal pueden 
+                cambiar la suerte de los jugadores.¿Hará más rico a un jugador o los enviará a la cárcel? El juego Monopoly es una actividad 
+                divertida para hacer en casa. Es uno de los juegos imprescindibles en las sesiones de juego en familia, ideal para jugar en 
+                el hogar y una divertida actividad didáctica para la casa. Solo puede haber un ganador en el juego Monopoly. ¿Serás tú? Los 
+                nombres y logotipos de Hasbro HASBRO GAMING y Monopoly, el diseño distintivo del tablero, los cuatro cuadrados de esquinas,el 
+                nombre y personaje Mr. Monopoly, así como cada uno de los elementos distintivos del tablero y las piezas de juego son marcas 
+                de comercio de Hasbro.
+         </p>   
+        <div class="buttons">
+          <button class="buy-now" onclick="buyNow()">Comprar ahora</button>
+          <button class="add-cart" onclick="addToCart()">Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="JS/P_información.js"></script>
+</body>
+</html>

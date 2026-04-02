@@ -1,0 +1,120 @@
+body {
+font-family: Arial, sans-serif;    
+margin: 0;
+padding: 20px;
+background-color: #f8f8f8;
+}
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 100px; /* más grande */
+    height: 100px;
+    object-fit: contain;
+    background: none; /* sin fondo */
+    border: none; /* sin bordes */
+    padding: 0;
+    box-shadow: none; /* sin sombra */
+}
+.top-lista {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-lista li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.top-lista li a:hover {
+    background-color: #12c0e7f5;
+    border-radius: 5px;
+    color: #111313;
+}
+body {
+   
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #7ed7e9, #ffffff); /* Degradado de colores */
+    background-size: cover;
+    background-attachment: fixed; /* Para que el fondo no se desplace */
+    color: white; /* Cambia el color del texto si es necesario */
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: hsl(189, 55%, 40%);
+    color: rgb(227, 227, 234);
+    padding: 1rem;
+}
+.grid-container {
+align-items: stretch;
+display: grid;
+gap: 20px;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+color: #111313;
+}
+.product {
+background: rgb(242, 242, 244);
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(27, 220, 237, 0.923);
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.product img {
+max-width: 100%;
+border-radius: 10px;
+}
+.product h3 {
+font-size: 1.2em;
+margin: 10px 0;
+}
+.product p {
+font-size: 1.1em;
+color: #e91e63;
+font-weight: bold;
+}
+.product button {
+background: #007bff;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1em;
+}
+.product button:hover {
+background: #0056b3;
+}
+
+@media (min-width: 1024px) {
+.grid-container {
+grid-template-columns: repeat(3, 1fr);
+}
+.product.large {
+grid-column: span 2;
+}
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+.grid-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 767px) {
+.grid-container {
+grid-template-columns: repeat(1, 1fr);
+}
+}
